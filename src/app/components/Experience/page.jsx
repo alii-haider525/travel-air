@@ -68,7 +68,7 @@ const page = () => {
             disabled={currentIndex === 0}
             style={{ opacity: currentIndex === 0 ? 0.5 : 1 }}
           >
-            <MdKeyboardArrowLeft size={20}/>
+            <MdKeyboardArrowLeft size={20} color="black" />
           </button>
 
           <div className="relative w-full overflow-hidden">
@@ -105,7 +105,7 @@ const page = () => {
             disabled={currentIndex >= maxIndex}
             style={{ opacity: currentIndex >= maxIndex ? 0.5 : 1 }}
           >
-            <MdKeyboardArrowRight  size={20}/>
+            <MdKeyboardArrowRight  size={20} color="black" />
           </button>
         </div>
       </div>

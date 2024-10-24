@@ -7,6 +7,7 @@ const form = () => {
     depart: "",
     return: "",
     travelers: "",
+    cabinClass: "",
   });
 
   const handleChange = (e) => {
@@ -32,18 +33,18 @@ const form = () => {
       <section className="container mx-auto py-6 sm:px-2 flex">
         <form
           onSubmit={handleSubmit}
-          className=" rounded-lg p-8 shadow-md text-black"
+          className="rounded-lg p-8 shadow-md text-black"
         >
-          <div className="flex flex-wrap xl:flex-nowrap gap-2 justify-center align-middle items-center bg-white lg:px-6 my-3 rounded-xl">
-            <div className="from-to flex gap-2 w-72 lg:w-96 ">
-              <div className=" rounded-2xl p-3  lg:w-48">
+          <div className="flex flex-wrap xl:flex-nowrap gap-0 sm:gap-2 justify-center align-middle items-center bg-white lg:px-6 my-3 rounded-xl">
+            <div className="from-to flex gap-0 sm:gap-2 w-72 lg:w-96 ">
+              <div className="rounded-2xl p-3 lg:w-48">
                 <div>
                   <select
                     name="from"
                     id="from"
                     value={formData.from}
                     onChange={handleChange}
-                    className="w-full p-2 rounded-xl outline-none  text-black border border-gray-400 block "
+                    className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 block"
                     required
                   >
                     <option value="">From</option>
@@ -55,12 +56,12 @@ const form = () => {
                 </div>
               </div>
 
-              <div className=" rounded-2xl p-3 lg:w-48">
+              <div className="rounded-2xl p-3 lg:w-48">
                 <div>
                   <select
                     value={formData.to}
                     onChange={handleChange}
-                    className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 "
+                    className="w-full p-2 rounded-xl outline-none text-black border border-gray-400"
                     name="to"
                     id="to"
                     required
@@ -75,32 +76,31 @@ const form = () => {
               </div>
             </div>
 
-            <div className=" rounded-2xl p-3 w-72 lg:w-52 ">
+            <div className="rounded-2xl p-3 w-72 lg:w-52">
               <input
-                // placeholder=" Depart Date"
                 type="date"
                 id="depart"
                 name="depart"
                 value={formData.depart}
                 onChange={handleChange}
                 required
-                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 "
+                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400"
               />
             </div>
 
-            <div className=" rounded-2xl p-3 w-72 lg:w-52 ">
+            <div className="rounded-2xl p-3 w-72 lg:w-52">
               <input
-                // placeholder="Return Date"
                 type="date"
                 id="return"
                 name="return"
                 value={formData.return}
                 onChange={handleChange}
                 required
-                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 "
+                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400"
               />
             </div>
-            <div className=" rounded-2xl p-3 w-72 lg:w-52 ">
+
+            <div className="rounded-2xl p-3 w-72 lg:w-52">
               <input
                 type="number"
                 id="travelers"
@@ -112,25 +112,25 @@ const form = () => {
                 placeholder="Travelers"
               />
             </div>
-            <div className=" rounded-2xl p-3 w-72 lg:w-52 ">
-            <div>
-                  <select
-                    value={formData.cabinClass}
-                    onChange={handleChange}
-                    className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 "
-                    name="class"
-                    placeholder="Cabin Class"
-                    id="class"
-                    required
-                  >
-                    <option value="">Cabin Class</option>
-                    <option value="Economy">Economy</option>
-                    <option value="Buisness">Buisness</option>
-                    <option value="First Class">First Class</option>
-                  </select>
-                </div>
+
+            <div className="rounded-2xl p-3 w-72 lg:w-52">
+              <select
+                value={formData.cabinClass}
+                onChange={handleChange}
+                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400"
+                name="class"
+                placeholder="Cabin Class"
+                id="class"
+                required
+              >
+                <option value="">Cabin Class</option>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="First Class">First Class</option>
+              </select>
             </div>
-            <div>
+
+            <div className="pb-2 sm:pb-0">
               <input
                 type="submit"
                 value="Send Query"
