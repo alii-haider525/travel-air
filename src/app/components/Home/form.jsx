@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const form = () => {
+const Form = () => {
   const [formData, setFormData] = useState({
     from: "",
     to: "",
@@ -8,10 +8,19 @@ const form = () => {
     return: "",
     travelers: "",
     cabinClass: "",
+    name: "",
+    contact: ""
   });
+
+  const [showAdditionalFields, setShowAdditionalFields] = useState(false); // State to control additional fields
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleQueryClick = (e) => {
+    e.preventDefault();
+    setShowAdditionalFields(true); // Show additional fields on Send Query click
   };
 
   const handleSubmit = (e) => {
@@ -25,7 +34,10 @@ const form = () => {
       return: "",
       travelers: "",
       cabinClass: "",
+      name: "",
+      contact: ""
     });
+    setShowAdditionalFields(false); // Reset form and hide additional fields
   };
 
   return (
@@ -36,6 +48,7 @@ const form = () => {
           className="rounded-lg p-8 shadow-md text-black"
         >
           <div className="flex flex-wrap xl:flex-nowrap gap-0 sm:gap-2 justify-center align-middle items-center bg-white lg:px-6 my-3 rounded-xl">
+            {/* Main Fields */}
             <div className="from-to flex gap-0 sm:gap-2 w-72 lg:w-96 ">
               <div className="rounded-2xl p-3 lg:w-48">
                 <div>
@@ -130,13 +143,18 @@ const form = () => {
               </select>
             </div>
 
+            {/* Send Query Button */}
             <div className="pb-2 sm:pb-0">
-              <input
-                type="submit"
-                value="Send Query"
+              <button
                 className="w-full p-2 rounded-2xl outline-none bg-blue-600 hover:text-blue-500 duration-1000 hover:bg-transparent text-white border border-gray-400 cursor-pointer"
-              />
+                onClick={handleQueryClick}
+              >
+                Send Query
+              </button>
             </div>
+
+            {/* Additional Fields (Name and Contact) */}
+            
           </div>
         </form>
       </section>
@@ -144,4 +162,4 @@ const form = () => {
   );
 };
 
-export default form;
+export default Form;
