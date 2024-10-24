@@ -56,7 +56,7 @@ const page = () => {
             >
               <div>
                 <img  src={item.img} alt={item.title}  className="lg:h-60 h-40 lg:w-80 w-40 bg-cover overflow-hidden"/>
-                <p className="font-bold text-xl font-serif mt-4 p-0 text-center">
+                <p className="font-bold text-xl text-black font-serif mt-4 p-0 text-center">
                   {item.title}
                 </p>
               

@@ -11,7 +11,7 @@ export default function page() {
   const menu = [
     {
       id: 1,
-      name: "home",
+      name: "Home",
       path: "#Home",
     },
     {
@@ -81,7 +81,7 @@ export default function page() {
                 className="border-[1px] border-white md:p-3 px-5 p-2 rounded-full duration-1000 hover:bg-blue-600"
               >
                 <div>
-                  <Link href={item.path} className="">
+                  <Link href={item.path} className="font-bold">
                     {item.name}
                   </Link>
                 </div>
@@ -99,7 +99,7 @@ export default function page() {
                   className="border-[1px] border-white  p-4 text-white rounded-full"
                 >
                   <div>
-                    <Link href={item.path} className="">
+                    <Link href={item.path} className="font-bold">
                       {item.name}
                     </Link>
                   </div>

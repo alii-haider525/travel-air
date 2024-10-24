@@ -4,6 +4,7 @@ const Airlines = [
   {
     id: 1,
     img: "/Airblue-removebg-preview.png",
+    title: "Air Blue"
   },
   {
     id: 2,
@@ -65,6 +66,14 @@ const Airlines = [
     id: 16,
     img: "/turkish-removebg-preview.png",
   },
+  {
+    id: 17,
+    img: "/jinnah.png"
+  },
+  {
+    id: 18,
+    img: "/emirates.png"
+  }
 ];
 
 const page = () => {
@@ -74,13 +83,14 @@ const page = () => {
         <h2 className=" font-semibold text-xl text-center">
           Major Sellable Airlines
         </h2>
-        <div className="flex flex-wrap xl:gap-0 gap-3 justify-center items-center md:justify-between lg:p-4 cursor-pointer">
+        <div className="flex flex-wrap gap-1 justify-center items-center md:justify-between lg:p-4">
           {Airlines.map((item) => (
-            <div key={item.id} className=" shadow-lg p-4 w-[100px] md:w-[200px] h-auto flex justify-center  mt-6 hover:scale-105">
+            <div key={item.id} className=" shadow-lg p-1 w-[100px] md:w-[200px] h-[100px] flex justify-center  mt-6 hover:scale-105 cursor-pointer bg-white rounded-md">
               <img
                 className="w-[100px] object-contain"
                 src={item.img}
                 alt="Air-lines"
+                title={item.title}
               />
             </div>
           ))}
