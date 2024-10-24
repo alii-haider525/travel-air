@@ -29,7 +29,7 @@ const page = () => {
 
   return (
     <div
-      className="bg-blue-700 flex items-center justify-around flex-col md:flex-row lg:min-h-screen w-full"
+      className="bg-blue-700 flex items-center justify-around flex-col md:flex-row h-screen md:h-auto lg:h-auto w-full"
       id="Contact"
     >
       <div className="bg-blue-700 md:p-8  w-full md:w-1/2 ">
@@ -37,11 +37,10 @@ const page = () => {
           <h1>Know More About Travel Air International</h1>
         </div>
 
-        <div className="rounded-lg shadow-xl md:p-6 md:border-[1px] bg-white h-[60%]">
+        <div className="rounded-lg shadow-xl md:p-6 md:border-[1px] bg-white h-auto lg:h-[60%] w-[90%] lg:w-auto pt-2 pb-2 ml-5 lg:ml-0 lg:items-center lg:justify-center" >
           <form onSubmit={handleSubmit} className="space-y-4 mx-6 ">
             <div className="grid grid-cols-2 gap-4">
               <div>
-              
                 <input
                   placeholder="First Name"
                   type="text"

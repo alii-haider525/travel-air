@@ -1,11 +1,10 @@
 "use client";
-import Link from "next/link";
 import Form from "./form";
 import { useState } from "react";
-import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import Link from "next/link";
 
 export default function page() {
   const menu = [
@@ -67,10 +66,15 @@ export default function page() {
             </button>
           </div>
           <div className="hidden sm:flex gap-3 text-2xl cursor-pointer ">
-            <FaLinkedin />
-            <FaWhatsappSquare />
-            <FaFacebookSquare />
-            <FaInstagramSquare />
+            <Link href="https://www.facebook.com/TravelairIntl?mibextid=ZbWKwL" passHref target="_blank">
+              <FaFacebookSquare />
+            </Link>
+            <Link href="https://www.instagram.com/travelairinternational?igsh=NXZicG5pYWE4OG92" passHref target="_blank">
+              <FaInstagramSquare />
+            </Link>
+            <Link href="https://wa.me/923108131016" passHref target="_blank">
+              <FaWhatsappSquare />
+            </Link>
           </div>
         </div>
         <nav className="mt-16 flex flex-col md:flex-row space-y-3 sm:space-y-0 sm:space-x-8">
