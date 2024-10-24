@@ -20,6 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="!scroll-smooth ">
+      <head>
+        <link rel="shortcut icon" href="https://www.svgrepo.com/show/282045/aeroplane-airplane.svg" type="image/x-icon" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
