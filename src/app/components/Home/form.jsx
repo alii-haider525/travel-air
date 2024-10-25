@@ -30,13 +30,13 @@ const form = () => {
 
   return (
     <>
-      <section className="container mx-auto py-6 sm:px-2 flex">
+      <section className="container mx-auto py-6 sm:px-2">
         <form
           onSubmit={handleSubmit}
-          className="rounded-lg p-8 shadow-md text-black"
         >
-          <div className="flex flex-wrap xl:flex-nowrap gap-0 sm:gap-2 justify-center align-middle items-center bg-white lg:px-6 my-3 rounded-xl">
-            <div className="from-to flex gap-0 sm:gap-2 w-72 lg:w-96 ">
+          <div className="border border-black flex flex-wrap gap-0 sm:gap-2 justify-center align-middle items-center bg-white lg:px-6 my-3 rounded-xl xl:flex-nowrap w-[100%]">
+          
+            <div className="from-to flex w-72 lg:w-96 ">
               <div className="rounded-2xl p-3 lg:w-48">
                 <div>
                   <select
@@ -47,7 +47,7 @@ const form = () => {
                     className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 block"
                     required
                   >
-                    <option value="">From</option>
+                     <option value="">To</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -292,6 +292,7 @@ const form = () => {
                     <option value="Yemen">Yemen</option>
                     <option value="Zambia">Zambia</option>
                     <option value="Zimbabwe">Zimbabwe</option>
+                    
                   </select>
                 </div>
               </div>
@@ -306,7 +307,7 @@ const form = () => {
                     id="to"
                     required
                   >
-                    <option value="">To</option>
+                   <option value="">From</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -557,6 +558,9 @@ const form = () => {
             </div>
 
             <div className="rounded-2xl p-3 w-72 lg:w-52">
+            
+
+
               <input
                 type="date"
                 id="depart"

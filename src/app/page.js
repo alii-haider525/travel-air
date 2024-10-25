@@ -9,7 +9,7 @@ import Airlines from '@/app/components/Airlines/page'
 import Footer from '@/app/components/Footer/page'
 const page = () => {
   return (
-    <div>
+    <div className="">
       <Hero />
       <Experience />
       <Explore/>
