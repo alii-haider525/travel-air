@@ -1,11 +1,12 @@
 import { useState } from "react";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 const form = () => {
   const [formData, setFormData] = useState({
     from: "",
     to: "",
-    depart: "",
-    return: "",
+    depart: null,
+    return: null,
     travelers: "",
     cabinClass: "",
   });
@@ -21,8 +22,8 @@ const form = () => {
     setFormData({
       from: "",
       to: "",
-      depart: "",
-      return: "",
+      depart: null,
+      return: null,
       travelers: "",
       cabinClass: "",
     });
@@ -558,29 +559,26 @@ const form = () => {
             </div>
 
             <div className="rounded-2xl p-3 w-72 lg:w-52">
-            
-
-
-              <input
-                type="date"
+            <DatePicker
                 id="depart"
                 name="depart"
-                value={formData.depart}
-                onChange={handleChange}
-                required
-                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400"
+                selected={formData.depart}
+                onChange={(date) => setFormData({ ...formData, depart: date })}
+                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 block"
+                placeholderText="Depart Date" // Placeholder text
+                dateFormat="dd/MM/yyyy" // Adjust date format as needed
               />
             </div>
 
             <div className="rounded-2xl p-3 w-72 lg:w-52">
-              <input
-                type="date"
+            <DatePicker
                 id="return"
                 name="return"
-                value={formData.return}
-                onChange={handleChange}
-                required
-                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400"
+                selected={formData.return}
+                onChange={(date) => setFormData({ ...formData, return: date })}
+                className="w-full p-2 rounded-xl outline-none text-black border border-gray-400 block"
+                placeholderText="Return Date" // Placeholder text
+                dateFormat="dd/MM/yyyy" // Adjust date format as needed
               />
             </div>
 
