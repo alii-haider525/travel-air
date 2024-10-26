@@ -1,82 +1,38 @@
 import React from "react";
 
-const page = () => {
+const ExplorePage = () => {
   return (
     <>
-      <div className="sm:mx-10" id="AboutUs">
-        {/* EXPLORE TRAVEL AIR INTERNATINOL */}
-        <div className="mt-16">
-          <div className="flex justify-center md:gap-20 mx-4 md:mx-0">
-            <div>
-              <img src="/image 6.png" alt="" />
-            </div>
-            <div>
-              <h4 className="md:text-xl text-center text-sm font-semibold xl:mt-10 mt-3 font-serif">
-                Explore Travel Air International
-              </h4>
-            </div>
-            <div>
-              <img src="/image 6.png" alt="" />
-            </div>
-          </div>
-          <div className="flex md:justify-center mt-10">
-            <div className="lg:w-[65%] w-full  ">
-              <p className="md:text-center text-justify font-serif px-4">
-                TRAVELAIR INTERNATIONAL is one of the leading lATA accredited
-                travel agencies of Islamabad (Pakistan) well established since
-                1974, offering airline reservations, ticketing of major
-                international and domestic airlines and variety of other travel
-                related services.
-              </p>
-            </div>
-          </div>
-          <div className="flex sm:justify-end justify-center  mt-10 lg:px-16">
-            <div className="lg:w-[65%] w-full">
-              <p className="md:text-center text-justify font-serif px-4">
-                TRAVELAIR INTERNATIONAL is one of the leading lATA accredited
-                travel agencies of Islamabad (Pakistan) well established since
-                1974, offering airline reservations, ticketing of major
-                international and domestic airlines and variety of other travel
-                related services.
-              </p>
-            </div>
-          </div>
+      <div className="container mx-auto py-16 px-4" id="AboutUs">
+        <div className="flex justify-center mb-6">
+          <img className="object-cover h-64 w-full rounded-lg shadow-md" src="/pexel.png" alt="Travel Experience" />
         </div>
-        {/* WELCOME TRAVEL AIR INTERNATIONAL */}
-        <div className=" flex justify-center ">
-          <div className="flex justify-around flex-col lg:flex-row lg:gap-2 p-2 w-full  ">
-            {/* IMAGE SECTION */}
-            <div className="image-section text-center xl:justify-start  flex justify-center w-full lg:w-1/2">
-              <img className="md:object-contain" src="/pexel.png" alt="" />
-            </div>
-            {/* TEXT AREA SECTION */}
-            <div className="flex justify-center items-center flex-wrap w-full lg:w-1/2 px-2 ">
-              <h1 className="font-semibold font-serif text-center md:text-3xl text-2xl lg:px-16 pt-3 md:pt-0">
-                Welcome Travel Air InterNational
-              </h1>
-              <div className="lg:px-4">
-                <h5 className="font-semibold text-xl">Vision:</h5>
-                <p className="font-serif pt-2 text-justify ">
-                  To see Travelair International has become a standard and
-                  aspires to be seen as the benchmark against which others are
-                  judged.
-                </p>
-              </div>
-              <div className="lg:px-4">
-                <h4 className="font-semibold text-xl ">Mission & Objective:</h4>
-                <p className="font-serif pt-2 text-justify  ">
-                  Endeavor to expand the tourism potential and strive to excel
-                  in providing optimum value travel services to the travellers
-                  and to excel in tourism related services backed by efficient
-                  and effective planning while seeking to enlarge their scope
-                  and dimension.Endeavor to expand the tourism potential and
-                  strive to excel in providing optimum value travel services to
-                  the travellers and to excel in tourism related services backed
-                  by efficient and effective planning while seeking to enlarge
-                  their scope and dimension.
-                </p>
-              </div>
-            </div>
+
+        <div className="bg-gradient-to-r from-blue-500 to-blue-300 rounded-lg shadow-lg p-8 text-center mb-8">
+          <h1 className="text-5xl font-bold text-white mb-4">Explore Travel Air International</h1>
+          <div className="flex justify-center mb-6">
+            <img src="/image 6.png" alt="Travel Air Logo" className="h-32 w-auto object-contain rounded-full border-4 border-white shadow-lg" />
+          </div>
+          <p className="text-lg text-white max-w-3xl mx-auto mb-6 leading-relaxed">
+            TRAVELAIR INTERNATIONAL is one of the leading IATA accredited travel agencies of Islamabad (Pakistan), well established since 1974, offering airline reservations, ticketing of major international and domestic airlines, and a variety of other travel-related services.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-lg p-8 text-center">
+          <h2 className="text-4xl font-semibold text-blue-800 mb-4">Welcome to Travel Air International</h2>
+          
+          <div className="mb-6">
+            <h3 className="font-semibold text-xl text-blue-700">Vision:</h3>
+            <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto mb-6 text-center">
+              To see Travel Air International become a standard and aspire to be seen as the benchmark against which others are judged.
+            </p>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="font-semibold text-xl text-blue-700">Mission & Objective:</h3>
+            <p className="text-gray-700 leading-relaxed max-w-2xl mx-auto text-center">
+              Endeavor to expand the tourism potential and strive to excel in providing optimum value travel services to the travelers. We aim to enhance tourism-related services backed by efficient planning while seeking to enlarge their scope and dimension.
+            </p>
           </div>
         </div>
       </div>
@@ -84,4 +40,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ExplorePage;
