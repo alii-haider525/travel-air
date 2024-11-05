@@ -8,7 +8,7 @@ const ExplorePage = () => {
           <img className="object-cover h-64 w-full rounded-lg shadow-md" src="/pexel.png" alt="Travel Experience" />
         </div>
 
-        <div className="bg-gradient-to-r from-blue-500 to-blue-300 rounded-lg shadow-lg p-8 text-center mb-8">
+        <div className="bg-blue-700 from-blue-500 to-blue-300 rounded-lg shadow-lg p-8 text-center mb-8">
           <h1 className="text-5xl font-bold text-white mb-4">Explore Travel Air International</h1>
           <div className="flex justify-center mb-6">
             <img src="/image 6.png" alt="Travel Air Logo" className="h-32 w-auto object-contain rounded-full border-4 border-white shadow-lg" />
